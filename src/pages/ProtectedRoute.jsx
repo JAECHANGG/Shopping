@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useAuthContext } from "../components/context/AuthContext";
+import { useAuthContext } from "../context/AuthContext";
 
 // 로그인한 사용자가 있는지 확인한다.
 // 그 사용자가 어드민 권한이 있는지 확인한다.
