@@ -6,15 +6,15 @@ const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
   const [user, setUser] = useState();
-
+  console.log(user);
   useEffect(() => {
-    onUserStateChange((user) => {
-      setUser(user);
-    });
+    onUserStateChange((user) => setUser(user));
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login: login, logout: logout }}>
+    <AuthContext.Provider
+      value={{ user, uid: user && user.uid, login: login, logout: logout }}
+    >
       {children}
     </AuthContext.Provider>
   );
